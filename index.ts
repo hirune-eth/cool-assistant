@@ -46,7 +46,7 @@ client.on('ready', () => {
         let title1 = '【Cool秘書日報】';
         let title2 = '★気になる内容のリンクを押すと詳細が見れますよ！'
         let title_day = '★日時：' + year +'/' + month + '/' + day + ' (' +dayOfWeekStr + ') 分';
-        let assistant = '★本日の担当秘書↓' + users;
+        // let assistant = '★本日の担当秘書↓' + users; future_001
 
         console.log('message.length:' + messages.length);
         console.log('messages_e1.length:' + messages_e1.length);
@@ -58,7 +58,7 @@ client.on('ready', () => {
                 .setColor('#25b7c0')
                 .setTitle(title1)
                 .setAuthor({ name: 'Cool秘書bot', url: 'https://twitter.com/HiruneSleeping' })
-                .setDescription(title_day + '\n' + title2 + '\n' + assistant + '\n' + messages)
+                .setDescription(title_day + '\n' + title2 + '\n' + messages) // future_001
         
             console.log('Embed.length:' + exampleEmbed.length)
             console.log('['+new Date()+'] ■■■メッセージ送信(単一)■■■')
