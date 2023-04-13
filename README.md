@@ -1,1 +1,8 @@
 # cool-assistant
+
+TOKEN=DiscordBotのトークンID
+SEND_CHANNEL_ID=秘書日報の送信先チャンネルID
+COMMAND_CHANNEL_ID=秘書日報を投稿するチャンネルID
+REMINDER_TO_MENTION_ID=秘書botのID
+REMINDER_ALL_MENTION_ID=全体メンション用のロールID
+REACT_EMOJI=🆒
