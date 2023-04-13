@@ -2,14 +2,19 @@
   "name": "cool-assistant",
   "version": "1.0.0",
   "main": "index.js",
+  "engines": {
+    "node": "19.6.x",
+    "npm": "9.4.0"
+  },
   "scripts": {
-    "build": "webpack --mode=production",
-    "start": "webpack-cli serve --mode development"
+    "start": "node index.js",
+    "dev": "nodemon index.js"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@types/node": "^18.0.6",
+    "@types/express": "^4.17.17",
+    "@types/node": "^18.15.11",
     "assert": "^2.0.0",
     "async": "^3.2.4",
     "chalk": "^5.0.1",
@@ -18,7 +23,7 @@
     "keypress": "^0.2.1",
     "lodash": "^4.17.21",
     "minimist": "^1.2.6",
-    "nodemon": "^2.0.19",
+    "nodemon": "^2.0.22",
     "power-assert": "^1.6.1",
     "sinon": "^14.0.0",
     "superagent": "^8.0.0",
@@ -37,7 +42,7 @@
     "discord.js": "^13.10.3",
     "discord.js-embed-menu": "^1.0.3",
     "dotenv": "^16.0.1",
-    "express": "^4.18.1",
+    "express": "^4.18.2",
     "http-errors": "^2.0.0",
     "jade": "^0.29.0",
     "mocha": "^10.0.0",
