@@ -74,15 +74,15 @@ let colum = '';
 client.on('ready', () => {
     console.log('[' + new Date() + '] The bot is ready');
     const cron = require('node-cron');
-    //22:00メッセージ送信(GMT) 7:00(JST)
-    cron.schedule('0 22 * * *', () => {
+    //7:00メッセージ送信
+    cron.schedule('0 7 * * *', () => {
         //console.log('message.length:' + messages.length);
         //console.log('messages_e1.length:' + messages_e1.length);
         //console.log('messages_e2.length:' + messages_e2.length);
         sendMessage();
     });
-    //4:00メモリクリア(GMT) 13:00(JST)
-    cron.schedule('0 4 * * *', () => {
+    //13:00メモリクリア
+    cron.schedule('0 13 * * *', () => {
         messages = '';
         messages_e1 = '';
         messages_e2 = '';
@@ -127,49 +127,49 @@ client.on('messageCreate', (message) => __awaiter(void 0, void 0, void 0, functi
                 console.log('[' + new Date() + '] ■■■コラム登録■■■');
                 console.log('Debug:003');
                 //console.log(colum)
-                //message.react(REACT_EMOJI);
+                message.react(REACT_EMOJI);
             }
             else if (messages.length + String(str).length < 3000) {
                 messages = messages + '\n' + str;
                 console.log('[' + new Date() + '] ■■■メッセージ登録(単一)■■■');
                 console.log('message.length(登録後):' + messages.length);
                 //console.log(messages);
-                //message.react(REACT_EMOJI);
+                message.react(REACT_EMOJI);
             }
             else if (messages_e1.length + String(str).length < 3000) {
                 messages_e1 = messages_e1 + '\n' + str;
                 console.log('[' + new Date() + '] ■■■メッセージ登録(複数1)■■■');
                 console.log('message_e1.length(登録後):' + messages_e1.length);
                 //console.log(messages_e);
-                //message.react(REACT_EMOJI);
+                message.react(REACT_EMOJI);
             }
             else if (messages_e2.length + String(str).length < 3000) {
                 messages_e2 = messages_e2 + '\n' + str;
                 console.log('[' + new Date() + '] ■■■メッセージ登録(複数2)■■■');
                 console.log('message_e2.length(登録後):' + messages_e2.length);
                 //console.log(messages_e);
-                //message.react(REACT_EMOJI);
+                message.react(REACT_EMOJI);
             }
             else if (messages_e3.length + String(str).length < 3000) {
                 messages_e3 = messages_e3 + '\n' + str;
                 console.log('[' + new Date() + '] ■■■メッセージ登録(複数3)■■■');
                 console.log('message_e3.length(登録後):' + messages_e3.length);
                 //console.log(messages_e);
-                //message.react(REACT_EMOJI);
+                message.react(REACT_EMOJI);
             }
             else if (messages_e4.length + String(str).length < 3000) {
                 messages_e4 = messages_e4 + '\n' + str;
                 console.log('[' + new Date() + '] ■■■メッセージ登録(複数4)■■■');
                 console.log('message_e4.length(登録後):' + messages_e4.length);
                 //console.log(messages_e);
-                //message.react(REACT_EMOJI);
+                message.react(REACT_EMOJI);
             }
             else if (messages_e5.length + String(str).length < 3000) {
                 messages_e5 = messages_e5 + '\n' + str;
                 console.log('[' + new Date() + '] ■■■メッセージ登録(複数5)■■■');
                 console.log('message_e5.length(登録後):' + messages_e5.length);
                 //console.log(messages_e);
-                //message.react(REACT_EMOJI);
+                message.react(REACT_EMOJI);
             }
             else {
                 console.log('メッセージサイズオーバー');
